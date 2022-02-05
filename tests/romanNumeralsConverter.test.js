@@ -61,9 +61,14 @@ describe('RomanNumeralsConverter Class', () => {
       expect(roman.translateRomanLetterIntoModern("M")).toBe(1000);
     });
   });
-  describe('#checkForIXOrIV?', () => {
+  describe('#checkForIV?', () => {
     it('returns true if found in string', () => {
-      expect(roman.checkForIXorIV('XIV')).toBe(true);
+      expect(roman.checkForIV('XIV')).toBe(true);
+    });
+  });
+  describe('#checkForIX?', () => {
+    it('returns true if found in string', () => {
+      expect(roman.checkForIX('XIX')).toBe(true);
     });
   })
 });
