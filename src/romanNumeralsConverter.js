@@ -46,6 +46,9 @@ class RomanNumeralsConverter{
   checkForIV(romanLetters) {
     return romanLetters.slice(-2) == "IV";
   };
+  checkForCM(romanLetters) {
+    return romanLetters.includes("CM");
+  };
 };
 
 
