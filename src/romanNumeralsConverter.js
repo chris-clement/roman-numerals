@@ -10,11 +10,15 @@ class RomanNumeralsConverter{
   };
   translateIntoModern(romanLetters) {
     if(this.checkForIX(romanLetters)) {
-      var romanLetters = romanLetters.replace("IX", "")
-      this.score += 9
+      var romanLetters = romanLetters.replace("IX", "");
+      this.score += 9;
     } else if(this.checkForIV(romanLetters)) {
-      var romanLetters = romanLetters.replace("IV", "")
-      this.score += 4
+      var romanLetters = romanLetters.replace("IV", "");
+      this.score += 4;
+    };
+    if(this.checkForCM(romanLetters)) {
+      romanLetters = romanLetters.replace("CM", "");
+      this.score += 900;
     };
     var romanLettersArray = romanLetters.split('')
     romanLettersArray.forEach((romanLetter) => {
