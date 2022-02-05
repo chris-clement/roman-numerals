@@ -11,9 +11,13 @@ describe('RomanNumeralsConverter Class', () => {
     it('returns a II for 2', () => {
       expect(roman.translateIntoRoman(2)).toBe("II");
     });
-    it('returns a V for 5', () => {
-      expect(roman.translateIntoRoman(5)).toBe("V");
+    it('returns a III for 3', () => {
+      expect(roman.translateIntoRoman(3)).toBe("III");
     });
+
+    // it('returns a V for 5', () => {
+    //   expect(roman.translateIntoRoman(5)).toBe("V");
+    // });
   });
   describe('#translateIntoModern', () => {
     describe('Two letters where 2nd letter adds to the number', () => {

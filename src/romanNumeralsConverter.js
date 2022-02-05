@@ -3,11 +3,12 @@ class RomanNumeralsConverter{
     this.score = 0;
   }
   translateIntoRoman(number) {
-    if(number == 1) {
-      return "I";
-    } else if(number == 2) {
-      return "II";
+    var result = "";
+    while(number > 0) {
+      result += "I";
+      number--;
     }
+    return result;
       return "V";
   };
   translateIntoModern(romanLetters) {
