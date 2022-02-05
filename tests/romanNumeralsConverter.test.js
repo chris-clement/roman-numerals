@@ -8,6 +8,9 @@ describe('RomanNumeralsConverter Class', () => {
     it('returns a I for 1', () => {
       expect(roman.translateIntoRoman(1)).toBe("I");
     });
+    it('returns a II for 2', () => {
+      expect(roman.translateIntoRoman(2)).toBe("II");
+    });
     it('returns a V for 5', () => {
       expect(roman.translateIntoRoman(5)).toBe("V");
     });
