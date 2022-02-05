@@ -41,10 +41,10 @@ class RomanNumeralsConverter{
     return this.score;
   };
   checkForIX(romanLetters) {
-    return romanLetters.includes("IX");
+    return romanLetters.slice(-2) == "IX";
   };
   checkForIV(romanLetters) {
-    return romanLetters.includes("IV");
+    return romanLetters.slice(-2) == "IV";
   };
 };
 
