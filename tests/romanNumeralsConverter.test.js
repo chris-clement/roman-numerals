@@ -36,5 +36,10 @@ describe('RomanNumeralsConverter Class', () => {
         expect(roman.translateIntoModern("M")).toBe(1000);
       });
     });
+    describe('Two letters where 2nd letter adds to the number', () => {
+      it('returns a 2 for II', () => {
+        expect(roman.translateIntoModern("II")).toBe(2);
+      });
+    })
   });
 });
