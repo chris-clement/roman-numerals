@@ -2,13 +2,13 @@ const RomanNumeralsConverter = require('../src/romanNumeralsConverter.js')
 
 describe('RomanNumeralsConverter Class', () => {
   describe('#translateIntoRoman', () => {
-    it('returns a 1 for I', () => {
+    it('returns a I for 1', () => {
       const roman = new RomanNumeralsConverter;
       expect(roman.translateIntoRoman(1)).toBe("I");
     });
-    it('returns a 5 for V', () => {
-      // const roman = new RomanNumeralsConverter;
-      // expect(roman.translate('V')).toBe(5);
+    it('returns a V for 5', () => {
+      const roman = new RomanNumeralsConverter;
+      expect(roman.translateIntoRoman(5)).toBe("V");
     });
   });
 });

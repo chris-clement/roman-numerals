@@ -1,6 +1,9 @@
 class RomanNumeralsConverter{
-  translateIntoRoman() {
-    return "I";
+  translateIntoRoman(number) {
+    if(number == 1) {
+      return "I";
+    } 
+      return "V";
   }
 };
 
