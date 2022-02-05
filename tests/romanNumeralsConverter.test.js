@@ -28,5 +28,8 @@ describe('RomanNumeralsConverter Class', () => {
     it('returns a 100 for C', () => {
       expect(roman.translateIntoModern("C")).toBe(100);
     });
+    it('returns a 500 for D', () => {
+      expect(roman.translateIntoModern("D")).toBe(500);
+    });
   });
 });

@@ -14,7 +14,10 @@ class RomanNumeralsConverter{
       return 10; 
     } else if(romanLetters == "L") {
       return 50; 
-    } return 100;
+    } else if(romanLetters == "C") {
+      return 100;
+    } 
+      return 500;
   };
 };
 
