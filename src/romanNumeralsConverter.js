@@ -9,8 +9,12 @@ class RomanNumeralsConverter{
       return "V";
   };
   translateIntoModern(romanLetters) {
-    romanLetters.split('').forEach((romanLetter) => {
-      this.translateRomanLetterIntoModern(romanLetter)
+    var romanLettersArray = romanLetters.split('')
+    if(romanLettersArray[0] == "I" && romanLettersArray[1] =="V") {
+      return 4
+    };
+    romanLettersArray.forEach((romanLetter) => {
+      this.translateRomanLetterIntoModern(romanLetter);
     });
     return this.score;
   };

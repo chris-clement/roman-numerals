@@ -23,7 +23,12 @@ describe('RomanNumeralsConverter Class', () => {
       it('returns a 150 for CL', () => {
         expect(roman.translateIntoModern("CL")).toBe(150);
       });
-    })
+    });
+    describe('Two letters where 1st letter subtracts the value of the number', () => {
+      it('returns a 4 for IV', () => {
+        expect(roman.translateIntoModern("IV")).toBe(4);
+      });
+    });
   });
   describe('#translateRomanLetterIntoModern', () => {
     it('returns a 1 for I', () => {
