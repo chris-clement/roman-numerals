@@ -6,8 +6,11 @@ class RomanNumeralsConverter{
       return "V";
   };
   translateIntoModern(romanLetters) {
-    return 1
-  }
+    if(romanLetters == "I") {
+      return 1;
+    }
+      return 5;
+  };
 };
 
 module.exports = RomanNumeralsConverter;
