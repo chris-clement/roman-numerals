@@ -4,6 +4,9 @@ class RomanNumeralsConverter{
       return "I";
     } 
       return "V";
+  };
+  translateIntoModern(romanLetters) {
+    return 1
   }
 };
 

@@ -16,3 +16,38 @@ C          100
 D          500
 M          1,000
 Remember that there can't be more than 3 identical symbols in a row.
+
+## Input vs Output
+
+Integer --> String
+
+1 --> "I"
+2 --> "II"
+
+4 --> "IV"
+5 --> "V"
+6 --> "VI"
+
+9 --> "IX"
+10 --> "X"
+14 --> "XIV"
+50 --> "L"
+100 --> "C"
+500 --> "D"
+1000 --> "M"
+
+## Edge cases
+
+What if input is not an integer? 
+Input is negative?
+
+## Plan
+
+A translateIntoModern method might be simpler.
+
+Can then do the reverse of that for translateIntoRoman
+
+## translateIntoModern
+
+1. Do it for all single letters.
+2. Then look at 2 letters, where the number it is XI for instance, so adding. Not IX for now. so VI, XI, LX etc.
