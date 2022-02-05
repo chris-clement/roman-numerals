@@ -42,6 +42,9 @@ describe('RomanNumeralsConverter Class', () => {
       it('returns a 984 for CMLXXXIV', () => {
         expect(roman.translateIntoModern("CMLXXXIV")).toBe(984);
       });
+      it('returns a 1889 for MDCCCLXXXIX', () => {
+        expect(roman.translateIntoModern("MDCCCLXXXIX")).toBe(1889);
+      });
     });
   });
   describe('#translateRomanLetterIntoModern', () => {
