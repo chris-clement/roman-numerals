@@ -7,25 +7,30 @@ class RomanNumeralsConverter{
   };
   translateIntoModern(romanLetters) {
     if(romanLetters.length == 1) {
-      if(romanLetters == "I") {
-        return 1;
-      } else if(romanLetters == "V") {
-        return 5;
-      } else if(romanLetters == "X") {
-        return 10; 
-      } else if(romanLetters == "L") {
-        return 50; 
-      } else if(romanLetters == "C") {
-        return 100;
-      } else if(romanLetters == "D") {
-        return 500;
-      } else if(romanLetters == "M") {
-        return 1000;
-      };
+      return this.translateRomanLetterIntoModern(romanLetters)
     };
-      return 2
+      return 2;
   };
+  translateRomanLetterIntoModern(single_letter) {
+    if(single_letter == "I") {
+      return 1;
+    } else if(single_letter == "V") {
+      return 5;
+    } else if(single_letter == "X") {
+      return 10; 
+    } else if(single_letter == "L") {
+      return 50; 
+    } else if(single_letter == "C") {
+      return 100;
+    } else if(single_letter == "D") {
+      return 500;
+    } else if(single_letter == "M") {
+      return 1000;
+    };
+  }
 };
+
+
 
 module.exports = RomanNumeralsConverter;
 

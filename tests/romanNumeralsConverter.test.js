@@ -13,33 +13,33 @@ describe('RomanNumeralsConverter Class', () => {
     });
   });
   describe('#translateIntoModern', () => {
-    describe('for single letters', () => {
-      it('returns a 1 for I', () => {
-        expect(roman.translateIntoModern("I")).toBe(1);
-      });
-      it('returns a 5 for V', () => {
-        expect(roman.translateIntoModern("V")).toBe(5);
-      });
-      it('returns a 10 for X', () => {
-        expect(roman.translateIntoModern("X")).toBe(10);
-      });
-      it('returns a 50 for L', () => {
-        expect(roman.translateIntoModern("L")).toBe(50);
-      });
-      it('returns a 100 for C', () => {
-        expect(roman.translateIntoModern("C")).toBe(100);
-      });
-      it('returns a 500 for D', () => {
-        expect(roman.translateIntoModern("D")).toBe(500);
-      });
-      it('returns a 1000 for M', () => {
-        expect(roman.translateIntoModern("M")).toBe(1000);
-      });
-    });
     describe('Two letters where 2nd letter adds to the number', () => {
       it('returns a 2 for II', () => {
         expect(roman.translateIntoModern("II")).toBe(2);
       });
     })
+  });
+  describe('#translateRomanLetterIntoModern', () => {
+    it('returns a 1 for I', () => {
+      expect(roman.translateRomanLetterIntoModern("I")).toBe(1);
+    });
+    it('returns a 5 for V', () => {
+      expect(roman.translateRomanLetterIntoModern("V")).toBe(5);
+    });
+    it('returns a 10 for X', () => {
+      expect(roman.translateRomanLetterIntoModern("X")).toBe(10);
+    });
+    it('returns a 50 for L', () => {
+      expect(roman.translateRomanLetterIntoModern("L")).toBe(50);
+    });
+    it('returns a 100 for C', () => {
+      expect(roman.translateRomanLetterIntoModern("C")).toBe(100);
+    });
+    it('returns a 500 for D', () => {
+      expect(roman.translateRomanLetterIntoModern("D")).toBe(500);
+    });
+    it('returns a 1000 for M', () => {
+      expect(roman.translateRomanLetterIntoModern("M")).toBe(1000);
+    });
   });
 });
