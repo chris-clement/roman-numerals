@@ -9,18 +9,14 @@ class RomanNumeralsConverter{
       return "V";
   };
   translateIntoModern(romanLetters) {
-    if(this.checkForIX(romanLetters) == true) {
+    if(this.checkForIX(romanLetters)) {
       var romanLetters = romanLetters.replace("IX", "")
       this.score += 9
-    } else if(this.checkForIV(romanLetters) == true) {
+    } else if(this.checkForIV(romanLetters)) {
       var romanLetters = romanLetters.replace("IV", "")
       this.score += 4
     };
     var romanLettersArray = romanLetters.split('')
-    if(romanLettersArray[0] == "I" && (romanLettersArray[1] == "V" || romanLettersArray[1] == "X") ) {
-      this.translateRomanLetterIntoModern(romanLettersArray[1]);
-      return this.score - 1;
-    };
     romanLettersArray.forEach((romanLetter) => {
       this.translateRomanLetterIntoModern(romanLetter);
     });
@@ -45,10 +41,10 @@ class RomanNumeralsConverter{
     return this.score;
   };
   checkForIX(romanLetters) {
-    return romanLetters.includes("IX") ? true : false;
+    return romanLetters.includes("IX");
   };
   checkForIV(romanLetters) {
-    return romanLetters.includes("IV") ? true : false;
+    return romanLetters.includes("IV");
   };
 };
 
