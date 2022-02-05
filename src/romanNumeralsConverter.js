@@ -53,6 +53,9 @@ class RomanNumeralsConverter{
   checkForCM(romanLetters) {
     return romanLetters.includes("CM");
   };
+  checkForXC(romanLetters) {
+    return romanLetters.includes("XC");
+  };
 };
 
 

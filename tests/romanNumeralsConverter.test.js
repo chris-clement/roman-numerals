@@ -48,6 +48,9 @@ describe('RomanNumeralsConverter Class', () => {
       it('returns a 1989 for MCMLXXXIX', () => {
         expect(roman.translateIntoModern("MCMLXXXIX")).toBe(1989);
       });
+      it('returns a 1990 for MCMXC', () => {
+        expect(roman.translateIntoModern("MCMXC")).toBe(1990);
+      });
     });
   });
   describe('#translateRomanLetterIntoModern', () => {
@@ -86,6 +89,11 @@ describe('RomanNumeralsConverter Class', () => {
   describe('#checkForCM', () => {
     it('returns true if found in string', () => {
       expect(roman.checkForCM('CMLXXXIV')).toBe(true);
+    });
+  });
+  describe('#checkForXC', () => {
+    it('returns true if found in string', () => {
+      expect(roman.checkForXC('DXC')).toBe(true);
     });
   });
 });
