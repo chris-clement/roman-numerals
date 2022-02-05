@@ -1,6 +1,6 @@
 class RomanNumeralsConverter{
-  translate() {
-    return 1;
+  translateIntoRoman() {
+    return "I";
   }
 };
 
