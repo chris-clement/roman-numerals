@@ -32,6 +32,11 @@ describe('RomanNumeralsConverter Class', () => {
         expect(roman.translateIntoModern("IX")).toBe(9);
       });
     });
+    describe("More than 2 letters where there is an 'I' before one of the letters", () => {
+      it('returns a 14 for XIV', () => {
+        expect(roman.translateIntoModern("XIV")).toBe(14);
+      });
+    });
   });
   describe('#translateRomanLetterIntoModern', () => {
     it('returns a 1 for I', () => {
@@ -56,4 +61,9 @@ describe('RomanNumeralsConverter Class', () => {
       expect(roman.translateRomanLetterIntoModern("M")).toBe(1000);
     });
   });
+  describe('#checkForIXOrIV?', () => {
+    it('returns true if found in string', () => {
+      expect(roman.checkForIXorIV('XIV')).toBe(true);
+    });
+  })
 });

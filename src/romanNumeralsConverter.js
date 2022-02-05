@@ -36,7 +36,10 @@ class RomanNumeralsConverter{
       this.score += 1000;
     };
     return this.score;
-  }
+  };
+  checkForIXorIV(romanLetters) {
+    return (romanLetters.includes("IX") || romanLetters.includes("IV")) ? true : false;
+  };
 };
 
 
