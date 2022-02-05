@@ -20,6 +20,10 @@ class RomanNumeralsConverter{
       romanLetters = romanLetters.replace("CM", "");
       this.score += 900;
     };
+    if(this.checkForXC(romanLetters)) {
+      romanLetters = romanLetters.replace("XC", "");
+      this.score += 90;
+    };
     var romanLettersArray = romanLetters.split('')
     romanLettersArray.forEach((romanLetter) => {
       this.translateRomanLetterIntoModern(romanLetter);
