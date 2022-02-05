@@ -20,6 +20,9 @@ describe('RomanNumeralsConverter Class', () => {
       it('returns a 6 for VI', () => {
         expect(roman.translateIntoModern("VI")).toBe(6);
       });
+      it('returns a 150 for CL', () => {
+        expect(roman.translateIntoModern("CL")).toBe(150);
+      });
     })
   });
   describe('#translateRomanLetterIntoModern', () => {
