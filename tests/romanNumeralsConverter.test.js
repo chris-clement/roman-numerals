@@ -51,6 +51,9 @@ describe('RomanNumeralsConverter Class', () => {
       it('returns a 1990 for MCMXC', () => {
         expect(roman.translateIntoModern("MCMXC")).toBe(1990);
       });
+      it('returns a 1666 for MDCLXVI', () => {
+        expect(roman.translateIntoModern("MDCLXVI")).toBe(1666);
+      });
     });
   });
   describe('#translateRomanLetterIntoModern', () => {
