@@ -9,16 +9,10 @@ class RomanNumeralsConverter{
       return "V";
   };
   translateIntoModern(romanLetters) {
-    if(romanLetters.length == 1) {
-      this.translateRomanLetterIntoModern(romanLetters)
-      return this.score
-    }
-      else if(romanLetters == "II") {
-        this.translateRomanLetterIntoModern("I")
-        this.translateRomanLetterIntoModern("I")
-        return this.score;
-      }
-        return 6;
+    romanLetters.split('').forEach((romanLetter) => {
+      this.translateRomanLetterIntoModern(romanLetter)
+    });
+    return this.score;
   };
   translateRomanLetterIntoModern(single_letter) {
     if(single_letter == "I") {
