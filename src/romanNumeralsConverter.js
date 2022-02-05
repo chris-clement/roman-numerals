@@ -10,8 +10,9 @@ class RomanNumeralsConverter{
   };
   translateIntoModern(romanLetters) {
     var romanLettersArray = romanLetters.split('')
-    if(romanLettersArray[0] == "I" && romanLettersArray[1] =="V") {
-      return 4
+    if(romanLettersArray[0] == "I" && (romanLettersArray[1] == "V" || romanLettersArray[1] == "X") ) {
+      this.translateRomanLetterIntoModern(romanLettersArray[1]);
+      return this.score - 1;
     };
     romanLettersArray.forEach((romanLetter) => {
       this.translateRomanLetterIntoModern(romanLetter);

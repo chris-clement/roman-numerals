@@ -28,6 +28,9 @@ describe('RomanNumeralsConverter Class', () => {
       it('returns a 4 for IV', () => {
         expect(roman.translateIntoModern("IV")).toBe(4);
       });
+      it('returns a 9 for IX', () => {
+        expect(roman.translateIntoModern("IX")).toBe(9);
+      });
     });
   });
   describe('#translateRomanLetterIntoModern', () => {
