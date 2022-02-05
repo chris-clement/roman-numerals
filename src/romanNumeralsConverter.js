@@ -1,13 +1,23 @@
 class RomanNumeralsConverter{
   constructor() {
     this.score = 0;
-  }
+    this.numerals = [
+      {value: 4, numeral: "IV"}, 
+      {value: 1, numeral: "I"}
+    ];
+  };
   translateIntoRoman(number) {
     var result = "";
-    while(number > 0) {
-      result += "I";
-      number--;
-    }
+    this.numerals.forEach((translation) => {
+      if(number > translation['value']) {
+        number -= translation['value'];
+        result += translation['numeral'];
+      };
+    })
+    // while(number > 0) {
+    //   result += "I";
+    //   number--;
+    // };
     return result;
       return "V";
   };
