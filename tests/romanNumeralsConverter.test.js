@@ -45,6 +45,9 @@ describe('RomanNumeralsConverter Class', () => {
       it('returns a 1889 for MDCCCLXXXIX', () => {
         expect(roman.translateIntoModern("MDCCCLXXXIX")).toBe(1889);
       });
+      it('returns a 1989 for MCMLXXXIX', () => {
+        expect(roman.translateIntoModern("MCMLXXXIX")).toBe(1989);
+      });
     });
   });
   describe('#translateRomanLetterIntoModern', () => {
