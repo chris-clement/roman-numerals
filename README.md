@@ -51,3 +51,5 @@ Can then do the reverse of that for translateIntoRoman
 
 1. Do it for all single letters.
 2. Then look at 2 letters, where the number it is XI for instance, so adding. Not IX for now. so VI, XI, LX etc.
+3. Then look at where I is the first letter of 2 followed by an X or V. e.g. IV, IX.
+4. Then repeat same for more than 2 letters.
