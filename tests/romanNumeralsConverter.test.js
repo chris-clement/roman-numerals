@@ -17,6 +17,9 @@ describe('RomanNumeralsConverter Class', () => {
       it('returns a 2 for II', () => {
         expect(roman.translateIntoModern("II")).toBe(2);
       });
+      it('returns a 6 for VI', () => {
+        expect(roman.translateIntoModern("VI")).toBe(6);
+      });
     })
   });
   describe('#translateRomanLetterIntoModern', () => {

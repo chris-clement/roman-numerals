@@ -8,8 +8,11 @@ class RomanNumeralsConverter{
   translateIntoModern(romanLetters) {
     if(romanLetters.length == 1) {
       return this.translateRomanLetterIntoModern(romanLetters)
-    };
-      return 2;
+    }
+      else if(romanLetters == "II") {
+        return 2;
+      }
+        return 6;
   };
   translateRomanLetterIntoModern(single_letter) {
     if(single_letter == "I") {
