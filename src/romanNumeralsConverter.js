@@ -10,8 +10,10 @@ class RomanNumeralsConverter{
       return 1;
     } else if(romanLetters == "V") {
       return 5;
-    }
+    } else if(romanLetters == "X") {
       return 10; 
+    }
+      return 50; 
   };
 };
 
