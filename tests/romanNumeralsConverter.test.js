@@ -17,10 +17,9 @@ describe('RomanNumeralsConverter Class', () => {
     it('returns a IV for 4', () => {
       expect(roman.translateIntoRoman(4)).toBe("IV");
     });
-
-    // it('returns a V for 5', () => {
-    //   expect(roman.translateIntoRoman(5)).toBe("V");
-    // });
+    it('returns a V for 5', () => {
+      expect(roman.translateIntoRoman(5)).toBe("V");
+    });
   });
   describe('#translateIntoModern', () => {
     describe('Two letters where 2nd letter adds to the number', () => {

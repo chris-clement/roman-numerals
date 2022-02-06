@@ -2,6 +2,7 @@ class RomanNumeralsConverter{
   constructor() {
     this.score = 0;
     this.numerals = [
+      {value: 5, numeral: "V"},
       {value: 4, numeral: "IV"}, 
       {value: 1, numeral: "I"}
     ];
