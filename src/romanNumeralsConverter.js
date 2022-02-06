@@ -9,18 +9,14 @@ class RomanNumeralsConverter{
   translateIntoRoman(number) {
     var result = "";
     this.numerals.forEach((translation) => {
-      if(number > translation['value']) {
+      while(number >= translation['value']) {
         number -= translation['value'];
         result += translation['numeral'];
       };
-    })
-    // while(number > 0) {
-    //   result += "I";
-    //   number--;
-    // };
+    });
     return result;
-      return "V";
   };
+  
   translateIntoModern(romanLetters) {
     if(this.checkForIX(romanLetters)) {
       var romanLetters = romanLetters.replace("IX", "");
