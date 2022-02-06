@@ -29,6 +29,9 @@ describe('RomanNumeralsConverter Class', () => {
     it('returns a X for 10', () => {
       expect(roman.translateIntoRoman(10)).toBe("X");
     });
+    it('returns a XC for 90', () => {
+      expect(roman.translateIntoRoman(90)).toBe("XC");
+    });
   });
   describe('#translateIntoModern', () => {
     describe('Two letters where 2nd letter adds to the number', () => {

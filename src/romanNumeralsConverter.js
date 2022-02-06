@@ -5,6 +5,7 @@ class RomanNumeralsConverter{
       {value: 1000, numeral: "M"},
       {value: 500, numeral: "D"},
       {value: 100, numeral: "C"},
+      {value: 90, numeral: "XC"},
       {value: 50, numeral: "L"},
       {value: 10, numeral: "X"},
       {value: 9, numeral: "IX"},
