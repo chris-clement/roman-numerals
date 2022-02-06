@@ -39,8 +39,8 @@ class RomanNumeralsConverter{
   translateIntoModern2(romanLetters) {
     let result = 0;
     for(let i = 0; i<romanLetters.length; i++) {
-      if (this.specialCase.find(element => element.numeral == romanLetters[i] + romanLetters[i + 1]) != null) {
-        result += this.specialCase.find(element => element.numeral == romanLetters[i] + romanLetters[i + 1]).value;
+      if (this.findSpecialCase(romanLetters, i) != null) {
+        result += this.findSpecialCase(romanLetters, i).value
         i ++;
       }
       else {
@@ -52,6 +52,9 @@ class RomanNumeralsConverter{
       };
     };
     return result;
+  };
+  findSpecialCase(givenRomanLetters, index) {
+    return this.specialCase.find(element => element.numeral == givenRomanLetters[index] + givenRomanLetters[index + 1])
   };
   
   translateIntoModern(romanLetters) {
