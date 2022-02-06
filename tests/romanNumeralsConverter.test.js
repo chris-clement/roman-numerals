@@ -58,6 +58,9 @@ describe('RomanNumeralsConverter Class', () => {
     it('returns a 2000 for MM', () => {
       expect(roman.translateIntoModern2('MM')).toBe(2000);
     });
+    it('returns a 89 for LXXXIX', () => {
+      expect(roman.translateIntoModern2('LXXXIX')).toBe(89);
+    });
   });
   describe('#translateIntoModern', () => {
     describe('Two letters where 2nd letter adds to the number', () => {

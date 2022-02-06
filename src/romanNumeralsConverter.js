@@ -40,7 +40,7 @@ class RomanNumeralsConverter{
     let result = 0;
     for(let i = 0; i<romanLetters.length; i++) {
       if (this.specialCase.find(element => element.numeral == romanLetters[i] + romanLetters[i + 1]) != null) {
-        result += 4;
+        result += this.specialCase.find(element => element.numeral == romanLetters[i] + romanLetters[i + 1]).value;
         i ++;
       }
       else {
