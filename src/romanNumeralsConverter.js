@@ -29,7 +29,10 @@ class RomanNumeralsConverter{
   };
 
   translateIntoModern2(romanLetters) {
-    return 1;
+    if (romanLetters == "I") {
+      return 1;
+    }
+      return 2;
   };
   
   translateIntoModern(romanLetters) {

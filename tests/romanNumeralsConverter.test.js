@@ -45,7 +45,10 @@ describe('RomanNumeralsConverter Class', () => {
   describe('#translateIntoModern2', () => {
     it('returns a 1 for I', () => {
       expect(roman.translateIntoModern2('I')).toBe(1);
-    })
+    });
+    it('returns a 2 for II', () => {
+      expect(roman.translateIntoModern2('II')).toBe(2);
+    });
   });
   describe('#translateIntoModern', () => {
     describe('Two letters where 2nd letter adds to the number', () => {
