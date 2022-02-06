@@ -42,6 +42,11 @@ describe('RomanNumeralsConverter Class', () => {
       expect(roman.translateIntoRoman(1666)).toBe("MDCLXVI");
     });
   });
+  describe('#translateIntoModern2', () => {
+    it('returns a 1 for I', () => {
+      expect(roman.translateIntoModern2('I')).toBe(1);
+    })
+  });
   describe('#translateIntoModern', () => {
     describe('Two letters where 2nd letter adds to the number', () => {
       it('returns a 2 for II', () => {

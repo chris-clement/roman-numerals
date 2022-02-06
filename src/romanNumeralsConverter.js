@@ -27,6 +27,10 @@ class RomanNumeralsConverter{
     });
     return result;
   };
+
+  translateIntoModern2(romanLetters) {
+    return 1;
+  };
   
   translateIntoModern(romanLetters) {
     if(this.checkForIX(romanLetters)) {
