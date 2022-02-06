@@ -16,6 +16,14 @@ class RomanNumeralsConverter{
       {value: 4, numeral: "IV"}, 
       {value: 1, numeral: "I"}
     ];
+    this.specialCase = [
+      {value: 900, numeral: "CM"},
+      {value: 400, numeral: "CD"},
+      {value: 90, numeral: "XC"},
+      {value: 40, numeral: "XL"},
+      {value: 9, numeral: "IX"},
+      {value: 4, numeral: "IV"}
+    ]
   };
   translateIntoRoman(number) {
     var result = "";
@@ -31,7 +39,7 @@ class RomanNumeralsConverter{
   translateIntoModern2(romanLetters) {
     let result = 0;
     for(let i = 0; i<romanLetters.length; i++) {
-      if ((romanLetters[i] == "I") && (romanLetters[i + 1] == "V")) {
+      if (this.specialCase.find(element => element.numeral == romanLetters[i] + romanLetters[i + 1]) != null) {
         result += 4;
         i ++;
       }
