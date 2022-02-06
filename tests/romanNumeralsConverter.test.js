@@ -35,6 +35,12 @@ describe('RomanNumeralsConverter Class', () => {
     it('returns a CM for 900', () => {
       expect(roman.translateIntoRoman(900)).toBe("CM");
     });
+    it('returns a MCMXC for 1990', () => {
+      expect(roman.translateIntoRoman(1990)).toBe("MCMXC");
+    });
+    it('returns a MDCLXVI for 1666', () => {
+      expect(roman.translateIntoRoman(1666)).toBe("MDCLXVI");
+    });
   });
   describe('#translateIntoModern', () => {
     describe('Two letters where 2nd letter adds to the number', () => {
