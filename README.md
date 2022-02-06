@@ -1,55 +1,70 @@
-Create a function taking a positive integer as its parameter and returning a string containing the Roman Numeral representation of that integer.
+# Roman Numerals Converter
 
-Modern Roman numerals are written by expressing each digit separately starting with the left most digit and skipping any digit with a value of zero. In Roman numerals 1990 is rendered: 1000=M, 900=CM, 90=XC; resulting in MCMXC. 2008 is written as 2000=MM, 8=VIII; or MMVIII. 1666 uses each Roman symbol in descending order: MDCLXVI.
+### What this is?
 
-Example:
+This is a translator of Roman Numerals into Modern day numbers and a translator of Modern day numbers into Roman Numerals.
 
-solution(1000) # should return 'M'
-Help:
+### Tech stack used
 
-Symbol    Value
-I          1
-V          5
-X          10
-L          50
-C          100
-D          500
-M          1,000
-Remember that there can't be more than 3 identical symbols in a row.
+- JS
+- Jest for testing (100% Coverage)
 
-## Input vs Output
+### How to run
 
-Integer --> String
+```
+git clone https://github.com/chris-clement/roman-numerals.git
+cd roman-numerals
+npm install
+node
+const roman = require('./src/romanNumeralsConverter.js')
+```
 
-1 --> "I"
-2 --> "II"
+### How to use
 
-4 --> "IV"
-5 --> "V"
-6 --> "VI"
+create instance of the class
 
-9 --> "IX"
-10 --> "X"
-14 --> "XIV"
-50 --> "L"
-100 --> "C"
-500 --> "D"
-1000 --> "M"
+```
+translator = new roman
+RomanNumeralsConverter {
+  score: 0,
+  numerals: [
+    { value: 1000, numeral: 'M' },
+    { value: 900, numeral: 'CM' },
+    { value: 500, numeral: 'D' },
+    { value: 400, numeral: 'CD' },
+    { value: 100, numeral: 'C' },
+    { value: 90, numeral: 'XC' },
+    { value: 50, numeral: 'L' },
+    { value: 40, numeral: 'XL' },
+    { value: 10, numeral: 'X' },
+    { value: 9, numeral: 'IX' },
+    { value: 5, numeral: 'V' },
+    { value: 4, numeral: 'IV' },
+    { value: 1, numeral: 'I' }
+  ],
+  specialCase: [
+    { value: 900, numeral: 'CM' },
+    { value: 400, numeral: 'CD' },
+    { value: 90, numeral: 'XC' },
+    { value: 40, numeral: 'XL' },
+    { value: 9, numeral: 'IX' },
+    { value: 4, numeral: 'IV' }
+  ]
+}
+```
+To convert a Roman Numeral into Modern day numbers use the method translateIntoModern and input the Roman Numerals as a string in caps.
 
-## Edge cases
+```
+translator.translateIntoModern('MMXCVII')
+2097
+```
+To convert a Modern day number into Roman Numerals use the method translateIntoRoman and input the number as an integer.
 
-What if input is not an integer? 
-Input is negative?
+```
+translator.translateIntoRoman(2097)
+'MMXCVII'
+```
 
-## Plan
+### Task inspired by Codewars Kata
 
-A translateIntoModern method might be simpler.
-
-Can then do the reverse of that for translateIntoRoman
-
-## translateIntoModern
-
-1. Do it for all single letters.
-2. Then look at 2 letters, where the number it is XI for instance, so adding. Not IX for now. so VI, XI, LX etc.
-3. Then look at where I is the first letter of 2 followed by an X or V. e.g. IV, IX.
-4. Then repeat same for more than 2 letters.
+https://www.codewars.com/kata/51b66044bce5799a7f000003
