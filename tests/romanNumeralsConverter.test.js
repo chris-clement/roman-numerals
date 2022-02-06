@@ -20,6 +20,9 @@ describe('RomanNumeralsConverter Class', () => {
     it('returns a V for 5', () => {
       expect(roman.translateIntoRoman(5)).toBe("V");
     });
+    it('returns a VIII for 8', () => {
+      expect(roman.translateIntoRoman(8)).toBe("VIII");
+    });
   });
   describe('#translateIntoModern', () => {
     describe('Two letters where 2nd letter adds to the number', () => {
