@@ -42,39 +42,39 @@ describe('RomanNumeralsConverter Class', () => {
       expect(roman.translateIntoRoman(1666)).toBe("MDCLXVI");
     });
   });
-  describe('#translateIntoModern2', () => {
+  describe('#translateIntoModern', () => {
     it('returns a 1 for I', () => {
-      expect(roman.translateIntoModern2('I')).toBe(1);
+      expect(roman.translateIntoModern('I')).toBe(1);
     });
     it('returns a 2 for II', () => {
-      expect(roman.translateIntoModern2('II')).toBe(2);
+      expect(roman.translateIntoModern('II')).toBe(2);
     });
     it('returns a 3 for III', () => {
-      expect(roman.translateIntoModern2('III')).toBe(3);
+      expect(roman.translateIntoModern('III')).toBe(3);
     });
     it('returns a 4 for IV', () => {
-      expect(roman.translateIntoModern2('IV')).toBe(4);
+      expect(roman.translateIntoModern('IV')).toBe(4);
     });
     it('returns a 2000 for MM', () => {
-      expect(roman.translateIntoModern2('MM')).toBe(2000);
+      expect(roman.translateIntoModern('MM')).toBe(2000);
     });
     it('returns a 89 for LXXXIX', () => {
-      expect(roman.translateIntoModern2('LXXXIX')).toBe(89);
+      expect(roman.translateIntoModern('LXXXIX')).toBe(89);
     });
     it('returns a 984 for CMLXXXIV', () => {
-      expect(roman.translateIntoModern2('CMLXXXIV')).toBe(984);
+      expect(roman.translateIntoModern('CMLXXXIV')).toBe(984);
     });
     it('returns a 1889 for MDCCCLXXXIX', () => {
-      expect(roman.translateIntoModern2("MDCCCLXXXIX")).toBe(1889);
+      expect(roman.translateIntoModern("MDCCCLXXXIX")).toBe(1889);
     });
     it('returns a 1989 for MCMLXXXIX', () => {
-      expect(roman.translateIntoModern2("MCMLXXXIX")).toBe(1989);
+      expect(roman.translateIntoModern("MCMLXXXIX")).toBe(1989);
     });
     it('returns a 1990 for MCMXC', () => {
-      expect(roman.translateIntoModern2("MCMXC")).toBe(1990);
+      expect(roman.translateIntoModern("MCMXC")).toBe(1990);
     });
     it('returns a 1666 for MDCLXVI', () => {
-      expect(roman.translateIntoModern2("MDCLXVI")).toBe(1666);
+      expect(roman.translateIntoModern("MDCLXVI")).toBe(1666);
     });
   });
 });

@@ -36,7 +36,7 @@ class RomanNumeralsConverter{
     return result;
   };
 
-  translateIntoModern2(romanLetters) {
+  translateIntoModern(romanLetters) {
     let result = 0;
     for(let i = 0; i<romanLetters.length; i++) {
       if (this.findSpecialCase(romanLetters, i) != null) {
