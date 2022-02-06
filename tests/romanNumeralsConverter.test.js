@@ -61,6 +61,21 @@ describe('RomanNumeralsConverter Class', () => {
     it('returns a 89 for LXXXIX', () => {
       expect(roman.translateIntoModern2('LXXXIX')).toBe(89);
     });
+    it('returns a 984 for CMLXXXIV', () => {
+      expect(roman.translateIntoModern2('CMLXXXIV')).toBe(984);
+    });
+    it('returns a 1889 for MDCCCLXXXIX', () => {
+      expect(roman.translateIntoModern2("MDCCCLXXXIX")).toBe(1889);
+    });
+    it('returns a 1989 for MCMLXXXIX', () => {
+      expect(roman.translateIntoModern2("MCMLXXXIX")).toBe(1989);
+    });
+    it('returns a 1990 for MCMXC', () => {
+      expect(roman.translateIntoModern2("MCMXC")).toBe(1990);
+    });
+    it('returns a 1666 for MDCLXVI', () => {
+      expect(roman.translateIntoModern2("MDCLXVI")).toBe(1666);
+    });
   });
   describe('#translateIntoModern', () => {
     describe('Two letters where 2nd letter adds to the number', () => {
