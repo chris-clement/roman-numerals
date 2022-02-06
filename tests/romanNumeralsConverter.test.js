@@ -14,6 +14,9 @@ describe('RomanNumeralsConverter Class', () => {
     it('returns a III for 3', () => {
       expect(roman.translateIntoRoman(3)).toBe("III");
     });
+    it('returns a IV for 4', () => {
+      expect(roman.translateIntoRoman(4)).toBe("IV");
+    });
 
     // it('returns a V for 5', () => {
     //   expect(roman.translateIntoRoman(5)).toBe("V");
