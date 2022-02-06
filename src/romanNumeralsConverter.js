@@ -29,7 +29,15 @@ class RomanNumeralsConverter{
   };
 
   translateIntoModern2(romanLetters) {
-    return romanLetters.split('').length
+    let result = 0;
+    for(let i = 0; i<romanLetters.length; i++) {
+      this.numerals.forEach((translation) => {
+        if(translation['numeral'] == romanLetters[i]) {
+          result += translation['value']
+        };
+      });
+    }
+    return result;
   };
   
   translateIntoModern(romanLetters) {

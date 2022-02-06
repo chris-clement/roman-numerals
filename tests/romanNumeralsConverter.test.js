@@ -52,6 +52,12 @@ describe('RomanNumeralsConverter Class', () => {
     it('returns a 3 for III', () => {
       expect(roman.translateIntoModern2('III')).toBe(3);
     });
+    it('returns a 4 for IV', () => {
+      expect(roman.translateIntoModern2('IV')).toBe(4);
+    });
+    it('returns a 2000 for MM', () => {
+      expect(roman.translateIntoModern2('MM')).toBe(2000);
+    });
   });
   describe('#translateIntoModern', () => {
     describe('Two letters where 2nd letter adds to the number', () => {
