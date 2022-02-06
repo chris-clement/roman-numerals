@@ -31,12 +31,18 @@ class RomanNumeralsConverter{
   translateIntoModern2(romanLetters) {
     let result = 0;
     for(let i = 0; i<romanLetters.length; i++) {
-      this.numerals.forEach((translation) => {
-        if(translation['numeral'] == romanLetters[i]) {
-          result += translation['value']
-        };
-      });
-    }
+      if ((romanLetters[i] == "I") && (romanLetters[i + 1] == "V")) {
+        result += 4;
+        i ++;
+      }
+      else {
+        this.numerals.forEach((translation) => {
+          if(translation['numeral'] == romanLetters[i]) {
+            result += translation['value'];
+          };
+        });
+      };
+    };
     return result;
   };
   
