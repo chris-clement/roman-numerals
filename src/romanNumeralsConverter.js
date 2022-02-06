@@ -3,6 +3,7 @@ class RomanNumeralsConverter{
     this.score = 0;
     this.numerals = [
       {value: 1000, numeral: "M"},
+      {value: 900, numeral: "CM"},
       {value: 500, numeral: "D"},
       {value: 100, numeral: "C"},
       {value: 90, numeral: "XC"},

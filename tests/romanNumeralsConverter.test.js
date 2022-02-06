@@ -32,6 +32,9 @@ describe('RomanNumeralsConverter Class', () => {
     it('returns a XC for 90', () => {
       expect(roman.translateIntoRoman(90)).toBe("XC");
     });
+    it('returns a CM for 900', () => {
+      expect(roman.translateIntoRoman(900)).toBe("CM");
+    });
   });
   describe('#translateIntoModern', () => {
     describe('Two letters where 2nd letter adds to the number', () => {
